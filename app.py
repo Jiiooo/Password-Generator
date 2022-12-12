@@ -16,7 +16,7 @@ if language == "English":
     option = st.selectbox(
     "Do you want to strengthen the previous password you have created or do you want to create a new password?",
     ("Strengthen the password that I have created", "Create a new password"))
-    st.write("Kamu memilih:", option)
+    st.write("You selected:", option)
     
     if option ==  "Create a new password":
 
