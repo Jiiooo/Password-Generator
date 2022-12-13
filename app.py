@@ -8,7 +8,7 @@ language = st.sidebar.selectbox(
 
 if language == "English":
     st.title("Password Generator")
-    st.subheader("This page is to help you generate random password")
+    st.subheader("This page will help you generate random password")
     
     option = st.radio(
     "Do you want to strengthen the previous password you have created or do you want to create a new password?",
@@ -47,7 +47,7 @@ if language == "English":
 
 if language == "Indonesian":
     st.title("Pembuat Kata Sandi")
-    st.subheader("Halaman ini untuk membantu Anda membuat kata sandi dengan acak")
+    st.subheader("Halaman ini akan membantu Anda membuat kata sandi dengan acak")
 
     option = st.radio(
     "Apakah kamu ingin memperkuat kata sandi sebelumnya yang telah kamu buat atau ingin membuat kata sandi baru?",
