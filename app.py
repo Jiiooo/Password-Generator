@@ -13,7 +13,7 @@ if language == "English":
     option = st.radio(
     "Do you want to strengthen the previous password you have created or do you want to create a new password?",
     ("Strengthen the password that I have created", "Create a new password"))
-    st.markdown("You selected:"+ option)
+    st.markdown("You selected: "+ option)
 
     if option ==  "Create a new password":
         length = st.slider("Password Length", 6,100)
@@ -52,7 +52,7 @@ if language == "Indonesian":
     option = st.radio(
     "Apakah kamu ingin memperkuat kata sandi sebelumnya yang telah kamu buat atau ingin membuat kata sandi baru?",
     ("Perkuat kata sandi yang telah saya buat", "Buat kata sandi baru"))
-    st.markdown("Kamu memilih:"+ option)
+    st.markdown("Kamu memilih: "+ option)
     
     if option ==  "Buat kata sandi baru":
         length = st.slider("Panjang Kata Sandi", 6,100)
