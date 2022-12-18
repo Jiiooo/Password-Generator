@@ -1,5 +1,6 @@
 import streamlit as st
-import formula1 as f
+import EnglishFormula as e
+import IndonesianFormula as i
 
 language = st.sidebar.selectbox(
     "Choose your language",
@@ -16,7 +17,18 @@ if language == "English":
     st.markdown("You selected: "+ option)
 
     if option ==  "Create a new password":
-        length = st.slider("Password Length", 6,100)
+        length = st.slider("Password Length", 1,100) 
+        
+        if length <= 7 and length >= 5:
+            st.write("Weak")
+        elif length <= 4:
+            st.write("Very Weak")
+        elif length <= 9 and length >= 8:
+            st.write("Good ")
+        elif length <=12 and length >= 10:
+            st.write("Strong")
+        elif length <= 100 and length >=13:
+            st.write("Very Strong")
 
         uppercase = st.checkbox("Uppercase Letters")
         lowecase = st.checkbox("Lowercase Letters")
@@ -24,14 +36,31 @@ if language == "English":
         numbers = st.checkbox("Numbers")
 
         result=st.button("Make password")
+
+
         if result:
-            password = f.generate_password(length,uppercase,lowecase,symbols,numbers)
+            password = e.generate_password(length,uppercase,lowecase,symbols,numbers)
             st.write("Your password is:")
-            st.success(password)
+            st.code(password)
+            st.markdown("Congratulations! You just made a new password :smile: :smile: :smile:") 
+        else :
+            st.write ("Click the button to make a password :grinning: :grinning: :grinning:" )
+        
 
     if option == "Strengthen the password that I have created":
         title = st.text_input("Enter the password that you have created")
         length = st.slider("Password Length", 1,100)
+        
+        if length <= 7 and length >= 5:
+            st.write("Weak")
+        elif length <= 4:
+            st.write("Very Weak")
+        elif length <= 9 and length >= 8:
+            st.write("Good ")
+        elif length <=12 and length >= 10:
+            st.write("Strong")
+        elif length <= 100 and length >=13:
+            st.write("Very Strong")
 
         uppercase = st.checkbox("Uppercase Letters")
         lowecase = st.checkbox("Lowercase Letters")
@@ -40,10 +69,13 @@ if language == "English":
 
         result=st.button("Make Password")
         if result:
-            password = f.generate_password(length,uppercase,lowecase,symbols,numbers)
+            password = e.generate_password(length,uppercase,lowecase,symbols,numbers)
             password1 = title + password
             st.write("Your password is:")
-            st.success(password1)
+            st.code(password)
+            st.markdown("Congratulations! You just made a new password :smile: :smile: :smile:") 
+        else :
+            st.write ("Click the button to make a password :grinning: :grinning: :grinning:" )
 
 if language == "Indonesian":
     st.title("Pembuat Kata Sandi")
@@ -57,6 +89,17 @@ if language == "Indonesian":
     if option ==  "Buat kata sandi baru":
         length = st.slider("Panjang Kata Sandi", 6,100)
 
+        if length <= 7 and length >= 5:
+            st.write("Lemah")
+        elif length <= 4:
+            st.write("Sangat Lemah")
+        elif length <= 9 and length >= 8:
+            st.write("Bagus ")
+        elif length <=12 and length >= 10:
+            st.write("Kuat")
+        elif length <= 100 and length >=13:
+            st.write("Sangat Kuaat")
+
         uppercase = st.checkbox("Huruf Besar")
         lowecase = st.checkbox("Huruf Kecil")
         symbols = st.checkbox("Simbol")
@@ -64,14 +107,28 @@ if language == "Indonesian":
 
         result=st.button("Buat Kata Sandi")
         if result:
-            password = f.generate_password(length,uppercase,lowecase,symbols,numbers)
+            password = i.generate_password(length,uppercase,lowecase,symbols,numbers)
             st.write("Kata Sandi Anda adalah:")
-            st.success(password)
-
+            st.code(password)
+            st.markdown("Selamat! Kamu baru saja membuat kata sandi baru :smile: :smile: :smile:") 
+        else :
+            st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )
     
     if option == "Perkuat kata sandi yang telah saya buat":
         title = st.text_input("Masukkan kata sandi yang telah kamu buat ")
         length = st.slider("Panjang Kata Sandi", 1,100)
+
+        if length <= 7 and length >= 5:
+            st.write("Lemah")
+        elif length <= 4:
+            st.write("Sangat Lemah")
+        elif length <= 9 and length >= 8:
+            st.write("Bagus ")
+        elif length <=12 and length >= 10:
+            st.write("Kuat")
+        elif length <= 100 and length >=13:
+            st.write("Sangat Kuaat")
+
 
         uppercase = st.checkbox("Huruf Besar")
         lowecase = st.checkbox("Huruf kecil")
@@ -80,7 +137,10 @@ if language == "Indonesian":
 
         result=st.button("Buat Kata Sandi")
         if result:
-            password = f.generate_password(length,uppercase,lowecase,symbols,numbers)
+            password = i.generate_password(length,uppercase,lowecase,symbols,numbers)
             password1 = title + password
             st.write("Kata sandi Anda adalah:")
-            st.success(password1)
+            st.code(password)
+            st.markdown("Selamat! Kamu baru saja membuat kata sandi baru :smile: :smile: :smile:") 
+        else :
+            st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )
