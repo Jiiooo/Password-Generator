@@ -87,7 +87,7 @@ if language == "Indonesian":
     st.markdown("Kamu memilih: "+ option)
     
     if option ==  "Buat kata sandi baru":
-        length = st.slider("Panjang Kata Sandi", 6,100)
+        length = st.slider("Panjang Kata Sandi", 1,100)
 
         if length <= 7 and length >= 5:
             st.write("Lemah")
