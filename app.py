@@ -72,7 +72,7 @@ if language == "English":
             password = e.generate_password(length,uppercase,lowecase,symbols,numbers)
             password1 = title + password
             st.write("Your password is:")
-            st.code(password)
+            st.code(password1)
             st.markdown("Congratulations! You just made a new password :smile: :smile: :smile:") 
         else :
             st.write ("Click the button to make a password :grinning: :grinning: :grinning:" )
@@ -140,7 +140,7 @@ if language == "Indonesian":
             password = i.generate_password(length,uppercase,lowecase,symbols,numbers)
             password1 = title + password
             st.write("Kata sandi Anda adalah:")
-            st.code(password)
+            st.code(password1)
             st.markdown("Selamat! Kamu baru saja membuat kata sandi baru :smile: :smile: :smile:") 
         else :
             st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )
