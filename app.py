@@ -98,7 +98,7 @@ if language == "Indonesian":
         elif length <=12 and length >= 10:
             st.write("Kuat")
         elif length <= 100 and length >=13:
-            st.write("Sangat Kuaat")
+            st.write("Sangat Kuat")
 
         uppercase = st.checkbox("Huruf Besar")
         lowecase = st.checkbox("Huruf Kecil")
@@ -127,7 +127,7 @@ if language == "Indonesian":
         elif length <=12 and length >= 10:
             st.write("Kuat")
         elif length <= 100 and length >=13:
-            st.write("Sangat Kuaat")
+            st.write("Sangat Kuat")
 
 
         uppercase = st.checkbox("Huruf Besar")
