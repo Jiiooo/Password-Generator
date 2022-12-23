@@ -13,9 +13,9 @@ def generate_password(length,uppercase,lowecase,symbols,numbers):
         characters.extend(list(string.punctuation))
     if numbers:
         characters.extend(list(string.digits))
+        while len(password) != length:
+            password.append(random.choice(characters))
+        return "".join(password)
     if not uppercase and not lowecase and not symbols and not numbers:
         st.error("Program error! Anda harus mencentang setidaknya salah satu dari box diatas untuk membuat kata sandi baru.")
-    while len(password) != length:
-        password.append(random.choice(characters))
-    return "".join(password)
 
