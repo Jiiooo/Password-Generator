@@ -51,17 +51,6 @@ if language == "English":
         title = st.text_input("Enter the password that you have created")
         length = st.slider("Password Length", 1,100)
         
-        if length <= 7 and length >= 5:
-            st.write("Weak")
-        elif length <= 4:
-            st.write("Very Weak")
-        elif length <= 9 and length >= 8:
-            st.write("Good ")
-        elif length <=12 and length >= 10:
-            st.write("Strong")
-        elif length <= 100 and length >=13:
-            st.write("Very Strong")
-
         uppercase = st.checkbox("Uppercase Letters")
         lowecase = st.checkbox("Lowercase Letters")
         symbols = st.checkbox("Symbols")
@@ -73,7 +62,18 @@ if language == "English":
             password1 = title + password
             st.write("Your password is:")
             st.code(password1)
-            st.markdown("Congratulations! You just made a new password :smile: :smile: :smile:") 
+            if len (password1) <= 7 and len(password1) >= 5:
+                st.write("Weak length password")
+            elif len (password1) <= 4:
+                st.write("Very Weak length password")
+            elif len (password1) <= 9 and len (password1) >= 8:
+                st.write("Good length password")
+            elif len (password1) <=12 and len (password1) >= 10:
+                st.write("Strong length password")
+            elif len (password1)<= 100 and len (password1) >=13:
+                st.write("Very Strong length password")
+
+            st.markdown("Congratulations! You just made a new password :smile: :smile: :smile:")
         else :
             st.write ("Click the button to make a password :grinning: :grinning: :grinning:" )
 
@@ -118,17 +118,6 @@ if language == "Indonesian":
         title = st.text_input("Masukkan kata sandi yang telah kamu buat ")
         length = st.slider("Panjang Kata Sandi", 1,100)
 
-        if length <= 7 and length >= 5:
-            st.write("Lemah")
-        elif length <= 4:
-            st.write("Sangat Lemah")
-        elif length <= 9 and length >= 8:
-            st.write("Bagus ")
-        elif length <=12 and length >= 10:
-            st.write("Kuat")
-        elif length <= 100 and length >=13:
-            st.write("Sangat Kuat")
-
 
         uppercase = st.checkbox("Huruf Besar")
         lowecase = st.checkbox("Huruf kecil")
@@ -141,6 +130,16 @@ if language == "Indonesian":
             password1 = title + password
             st.write("Kata sandi Anda adalah:")
             st.code(password1)
+            if len (password1) <= 7 and len(password1) >= 5:
+                st.write("Panjang password lemah")
+            elif len (password1) <= 4:
+                st.write("Panjang password sangat lemah")
+            elif len (password1) <= 9 and len (password1) >= 8:
+                st.write("Panjang password bagus")
+            elif len (password1) <=12 and len (password1) >= 10:
+                st.write("Panjang password kuat")
+            elif len (password1)<= 100 and len (password1) >=13:
+                st.write("Panjang password sangat kuat")
             st.markdown("Selamat! Kamu baru saja membuat kata sandi baru :smile: :smile: :smile:") 
         else :
-            st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )
+            st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )\\
