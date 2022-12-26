@@ -142,4 +142,4 @@ if language == "Indonesian":
                 st.write("Panjang password sangat kuat")
             st.markdown("Selamat! Kamu baru saja membuat kata sandi baru :smile: :smile: :smile:") 
         else :
-            st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )\\
+            st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )
