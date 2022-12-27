@@ -63,15 +63,15 @@ if language == "English":
             st.write("Your password is:")
             st.code(password1)
             if len (password1) <= 7 and len(password1) >= 5:
-                st.write("Weak length password")
+                st.write("Weak")
             elif len (password1) <= 4:
-                st.write("Very Weak length password")
+                st.write("Very Weak ")
             elif len (password1) <= 9 and len (password1) >= 8:
-                st.write("Good length password")
+                st.write("Good ")
             elif len (password1) <=12 and len (password1) >= 10:
-                st.write("Strong length password")
+                st.write("Strong ")
             elif len (password1)<= 100 and len (password1) >=13:
-                st.write("Very Strong length password")
+                st.write("Very Strong ")
 
             st.markdown("Congratulations! You just made a new password :smile: :smile: :smile:")
         else :
@@ -131,15 +131,15 @@ if language == "Indonesian":
             st.write("Kata sandi Anda adalah:")
             st.code(password1)
             if len (password1) <= 7 and len(password1) >= 5:
-                st.write("Panjang password lemah")
+                st.write("Lemah")
             elif len (password1) <= 4:
-                st.write("Panjang password sangat lemah")
+                st.write("Lemah")
             elif len (password1) <= 9 and len (password1) >= 8:
-                st.write("Panjang password bagus")
+                st.write("Bagus")
             elif len (password1) <=12 and len (password1) >= 10:
-                st.write("Panjang password kuat")
+                st.write("Kuat")
             elif len (password1)<= 100 and len (password1) >=13:
-                st.write("Panjang password sangat kuat")
+                st.write("Sangat Kuat")
             st.markdown("Selamat! Kamu baru saja membuat kata sandi baru :smile: :smile: :smile:") 
         else :
             st.write ("Klik tombol untuk membuat kata sandi :grinning: :grinning: :grinning:" )
